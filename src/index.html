@@ -1,17 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Chart.js example</title>
-  </head>
-  <body>
-    <!-- <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/> -->
-    <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
 
-    <!-- <script type="module" src="dimensions.js"></script> -->
-    <script type="module" src="acquisitions.js"></script>
-    <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator | Calculate your Budget</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script defer src="js/app.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['Federal Taxes', 'State Taxes', 'Social Securtiy', 'Medicare', 'State Diability', 'Retirement Investment', 'Medical Incurance'],
+            datasets: [{
+              label: 'Pay Period Deuctions',
+              data: [120 , 70 , 60.20 , 10.450, 10, 50, 180],
+              borderWidth: 1
+            }]
+          },
+        });
+      </script> 
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+ 
 
-<script type="module" src="dimensions.js"></script>
-
-  </body>
+</body>
 </html>
